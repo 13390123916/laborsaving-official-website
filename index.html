@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LABOR-SAVING | Pneumatic Manipulator & Zero-Gravity Balance Arm</title>
+    <meta name="description" content="LABOR-SAVING - Professional pneumatic manipulator and zero-gravity balance arm manufacturer. Ergonomic solutions for industrial handling.">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-black: #0a0a0a;
+            --primary-red: #e31e24;
+            --primary-white: #ffffff;
+            --secondary-gray: #1a1a1a;
+            --accent-red: #ff2d35;
+            --text-gray: #b0b0b0;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--primary-black);
+            color: var(--primary-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: var(--primary-red);
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--primary-white);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-red);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-red);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="%23e31e2408" stroke-width="1"/></pattern></defs><rect width="1200" height="800" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            padding: 20px;
+            max-width: 1200px;
+        }
+
+        .hero-title {
+            font-size: 72px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, var(--primary-white), var(--primary-red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+            line-height: 1.2;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: var(--text-gray);
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-tagline {
+            font-size: 18px;
+            color: var(--primary-red);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 60px;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .btn-primary {
+            padding: 15px 40px;
+            background: var(--primary-red);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(227, 30, 36, 0.4);
+        }
+
+        .btn-secondary {
+            padding: 15px 40px;
+            background: transparent;
+            color: var(--primary-white);
+            border: 2px solid var(--primary-white);
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-white);
+            color: var(--primary-black);
+            transform: translateY(-3px);
+        }
+
+        /* ===== SECTIONS COMMON ===== */
+        section {
+            padding: 100px 50px;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--primary-white);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: var(--text-gray);
+            margin-bottom: 80px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highlight-red {
+            color: var(--primary-red);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            background: linear-gradient(to bottom, var(--primary-black), var(--secondary-gray));
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: var(--primary-white);
+        }
+
+        .about-text p {
+            font-size: 16px;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background: rgba(227, 30, 36, 0.05);
+            border: 1px solid rgba(227, 30, 36, 0.2);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(227, 30, 36, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(227, 30, 36, 0.2);
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--primary-red);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 3px solid var(--primary-red);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        /* ===== PRODUCTS SECTION ===== */
+        .products {
+            background: var(--secondary-gray);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: rgba(26, 26, 26, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(227, 30, 36, 0);
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: var(--primary-red);
+            box-shadow: 0 30px 60px rgba(227, 30, 36, 0.3);
+        }
+
+        .product-image {
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent, rgba(227, 30, 36, 0.9));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+        }
+
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .product-info {
+            padding: 35px;
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: -20px;
+            right: 30px;
+            background: var(--primary-red);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-info h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--primary-white);
+        }
+
+        .product-info p {
+            font-size: 15px;
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .product-features li {
+            padding: 8px 0;
+            color: var(--text-gray);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .product-features li i {
+            color: var(--primary-red);
+            font-size: 16px;
+        }
+
+        .product-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: gap 0.3s ease;
+        }
+
+        .product-link:hover {
+            gap: 15px;
+        }
+
+        /* ===== ADVANTAGES SECTION ===== */
+        .advantages {
+            background: var(--primary-black);
+            position: relative;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .advantage-card {
+            background: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(227, 30, 36, 0.1);
+            border-radius: 15px;
+            padding: 45px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advantage-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-red);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .advantage-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .advantage-card:hover {
+            background: rgba(26, 26, 26, 0.9);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(227, 30, 36, 0.15);
+        }
+
+        .advantage-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary-red), var(--accent-red));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 38px;
+            color: white;
+            transition: transform 0.4s ease;
+        }
+
+        .advantage-card:hover .advantage-icon {
+            transform: rotateY(180deg) scale(1.1);
+        }
+
+        .advantage-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary-white);
+        }
+
+        .advantage-card p {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* ===== INDUSTRIES SECTION ===== */
+        .industries {
+            background: linear-gradient(to bottom, var(--secondary-gray), var(--primary-black));
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .industry-item {
+            background: rgba(227, 30, 36, 0.03);
+            border: 1px solid rgba(227, 30, 36, 0.15);
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .industry-item:hover {
+            background: rgba(227, 30, 36, 0.1);
+            transform: translateY(-5px);
+            border-color: var(--primary-red);
+        }
+
+        .industry-item i {
+            font-size: 42px;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .industry-item span {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--primary-white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            background: var(--secondary-gray);
+            position: relative;
+        }
+
+        .contact-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .contact-info h3 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            color: var(--primary-white);
+        }
+
+        .contact-info > p {
+            font-size: 16px;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .contact-details {
+            list-style: none;
+        }
+
+        .contact-details li {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--primary-red), var(--accent-red));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: white;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-details li:hover .contact-icon {
+            transform: rotate(360deg);
+        }
+
+        .contact-text strong {
+            display: block;
+            font-size: 17px;
+            color: var(--primary-white);
+            margin-bottom: 5px;
+        }
+
+        .contact-text span,
+        .contact-text a {
+            font-size: 15px;
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-text a:hover {
+            color: var(--primary-red);
+        }
+
+        .contact-form {
+            background: rgba(10, 10, 10, 0.8);
+            padding: 45px;
+            border-radius: 20px;
+            border: 1px solid rgba(227, 30, 36, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-white);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(26, 26, 26, 0.9);
+            border: 2px solid rgba(227, 30, 36, 0.1);
+            border-radius: 10px;
+            color: var(--primary-white);
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-red);
+            box-shadow: 0 0 20px rgba(227, 30, 36, 0.15);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary-red), var(--accent-red));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(227, 30, 36, 0.4);
+        }
+
+        /* ===== FOOTER WITH SOCIAL ICONS ===== */
+        .footer {
+            background: var(--primary-black);
+            padding: 60px 50px 30px;
+            border-top: 1px solid rgba(227, 30, 36, 0.1);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-brand h3 {
+            font-size: 32px;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .footer-brand p {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.7;
+            max-width: 450px;
+        }
+
+        .footer-links h4,
+        .footer-social h4 {
+            font-size: 18px;
+            color: var(--primary-white);
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul li a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary-red);
+            transform: translateX(8px);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(227, 30, 36, 0.08);
+            border: 1px solid rgba(227, 30, 36, 0.25);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-white);
+            font-size: 20px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-red);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover::before {
+            transform: translateY(0);
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px) rotate(360deg);
+            border-color: var(--primary-red);
+            box-shadow: 0 10px 25px rgba(227, 30, 36, 0.3);
+        }
+
+        .social-icon i {
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-icon.facebook:hover { color: #1877f2; }
+        .social-icon.twitter:hover { color: #1da1f2; }
+        .social-icon.linkedin:hover { color: #0a66c2; }
+        .social-icon.instagram:hover { color: #e4405f; }
+        .social-icon.youtube:hover { color: #ff0000; }
+        .social-icon.tiktok:hover { color: #00f2ea; }
+        .social-icon.whatsapp:hover { color: #25d366; }
+        .social-icon.email:hover { color: var(--primary-red); }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+        }
+
+        .footer-bottom p {
+            color: var(--text-gray);
+            font-size: 13px;
+        }
+
+        .footer-bottom a {
+            color: var(--primary-red);
+            text-decoration: none;
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            .hero-title { font-size: 56px; }
+            .about-content { grid-template-columns: 1fr; }
+            .contact-container { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr; }
+            .products-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 70px 25px; }
+            .navbar { padding: 15px 25px; }
+            .nav-links { display: none; }
+            .hero-title { font-size: 42px; }
+            .hero-subtitle { font-size: 20px; }
+            .section-title { font-size: 36px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .products-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ===== SMOOTH SCROLL ===== */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ===== LOADING ANIMATION ===== */
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(227, 30, 36, 0.1);
+            border-top-color: var(--primary-red);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loader-wrapper.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Loading Animation -->
+<div class="loader-wrapper">
+    <div class="loader"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <a href="#" class="logo">LABOR-SAVING</a>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#advantages">Advantages</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="hero-tagline">Ergonomic Industrial Solutions</p>
+        <h1 class="hero-title">Take A Load Off<br>With <span class="highlight-red">Precision</span></h1>
+        <p class="hero-subtitle">
+            Professional pneumatic manipulators & zero-gravity balance arms<br>
+            Reduce injuries and increase productivity
+        </p>
+        <div class="cta-buttons">
+            <a href="#products" class="btn-primary">Explore Products</a>
+            <a href="#contact" class="btn-secondary">Get Quote</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <h2 class="section-title animate-on-scroll">About <span class="highlight-red">LABOR-SAVING</span></h2>
+    <p class="section-subtitle animate-on-scroll">
+        Leading manufacturer of ergonomic lift assistance devices and pneumatic manipulator solutions
+    </p>
+    
+    <div class="about-content">
+        <div class="about-text animate-on-scroll">
+            <h3>Revolutionizing Industrial Handling Since Day One</h3>
+            <p>
+                LABOR-SAVING is a premier manufacturer specializing in advanced <strong>pneumatic manipulators</strong> 
+                and <strong>zero-gravity balance arms</strong>. Our mission is to revolutionize workplace ergonomics 
+                by providing innovative lifting solutions that protect workers while maximizing operational efficiency.
+            </p>
+            <p>
+                Located in Shenyang, China, our state-of-the-art facility combines cutting-edge engineering with 
+                precision manufacturing to deliver products that meet international standards including CE certification. 
+                Each unit is meticulously crafted to ensure reliability, safety, and outstanding performance.
+            </p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">kg Capacity</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Zero Gravity</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">CE</div>
+                    <div class="stat-label">Certified</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-image animate-on-scroll">
+            <img src="images/product-showcase.jpg" alt="LABOR-SAVING Product Showcase">
+        </div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section class="products" id="products">
+    <h2 class="section-title animate-on-scroll">Our <span class="highlight-red">Products</span></h2>
+    <p class="section-subtitle animate-on-scroll">
+        Engineered for excellence, designed for efficiency — discover our complete range of ergonomic solutions
+    </p>
+    
+    <div class="products-grid">
+        <!-- Product Card 1: Pneumatic Manipulator -->
+        <div class="product-card animate-on-scroll">
+            <div class="product-image">
+                <img src="images/pneumatic-manipulator.jpg" alt="Pneumatic Manipulator">
+                <div class="product-overlay"></div>
+            </div>
+            <div class="product-info">
+                <span class="product-badge">Best Seller</span>
+                <h3>Pneumatic Manipulator</h3>
+                <p>
+                    Advanced pneumatic system providing weightless operation for loads up to 50kg. 
+                    Features intelligent control and precise positioning.
+                </p>
+                <ul class="product-features">
+                    <li><i class="fas fa-check-circle"></i> Zero Gravity Operation</li>
+                    <li><i class="fas fa-check-circle"></i> Up to 50kg Capacity</li>
+                    <li><i class="fas fa-check-circle"></i> Intelligent Control System</li>
+                    <li><i class="fas fa-check-circle"></i> CE Certified Safety Standards</li>
+                </ul>
+                <a href="#" class="product-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Product Card 2: Zero-Gravity Balance Arm -->
+        <div class="product-card animate-on-scroll">
+            <div class="product-image">
+                <img src="images/balance-arm.jpg" alt="Zero-Gravity Balance Arm">
+                <div class="product-overlay"></div>
+            </div>
+            <div class="product-info">
+                <span class="product-badge">Popular</span>
+                <h3>Zero-Gravity Balance Arm</h3>
+                <p>
+                    LS 30 / LS 50 series offering perfect balance for tools up to 50kg. 
+                    Ideal for assembly, welding, and material handling applications.
+                </p>
+                <ul class="product-features">
+                    <li><i class="fas fa-check-circle"></i> Perfect Weight Balance</li>
+                    <li><i class="fas fa-check-circle"></i> Full Range of Motion</li>
+                    <li><i class="fas fa-check-circle"></i> Lockable Joints</li>
+                    <li><i class="fas fa-check-circle"></i> Multiple Gripping Options</li>
+                </ul>
+                <a href="#" class="product-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Product Card 3: Custom Solutions -->
+        <div class="product-card animate-on-scroll">
+            <div class="product-image">
+                <img src="images/custom-solution.jpg" alt="Custom Solutions">
+                <div class="product-overlay"></div>
+            </div>
+            <div class="product-info">
+                <span class="product-badge">Custom</span>
+                <h3>Custom Solutions</h3>
+                <p>
+                    Tailored ergonomic systems designed specifically for your unique application needs. 
+                    From concept to installation, we engineer success.
+                </p>
+                <ul class="product-features">
+                    <li><i class="fas fa-check-circle"></i> Bespoke Engineering Design</li>
+                    <li><i class="fas fa-check-circle"></i> Application-Specific Configurations</li>
+                    <li><i class="fas fa-check-circle"></i> Full Installation Support</li>
+                    <li><i class="fas fa-check-circle"></i> After-Sales Service Package</li>
+                </ul>
+                <a href="#contact" class="product-link">
+                    Request Quote <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Advantages Section -->
+<section class="advantages" id="advantages">
+    <h2 class="section-title animate-on-scroll">Why Choose <span class="highlight-red">LABOR-SAVING</span></h2>
+    <p class="section-subtitle animate-on-scroll">
+        Our products are engineered to exceed expectations in safety, performance, and reliability
+    </p>
+    
+    <div class="advantages-grid">
+        <div class="advantage-card animate-on-scroll">
+            <div class="advantage-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Safety First</h3>
+            <p>Holds tool weight and absorbs torque reactions, reducing operator fatigue and preventing workplace injuries.</p>
+        </div>
+
+        <div class="advantage-card animate-on-scroll">
+            <div class="advantage-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Productivity Boost</h3>
+            <p>Zero gravity operation provides ergonomic benefits resulting in increased throughput and precision.</p>
+        </div>
+
+        <div class="advantage-card animate-on-scroll">
+            <div class="advantage-icon">
+                <i class="fas fa-cogs"></i>
+            </div>
+            <h3>Versatility</h3>
+            <p>Full range of motion required to complete any task more accurately, safely, and efficiently.</p>
+        </div>
+
+        <div class="advantage-card animate-on-scroll">
+            <div class="advantage-icon">
+                <i class="fas fa-medal"></i>
+            </div>
+            <h3>Premium Quality</h3>
+            <p>Crafted with high-grade materials and precision engineering to ensure durability and longevity.</p>
+        </div>
+
+        <div class="advantage-card animate-on-scroll">
+            <div class="advantage-icon">
+                <i class="fas fa-headset"></i>
+            </div>
+            <h3>Expert Support</h3>
+            <p>Dedicated technical team provides comprehensive support from selection to after-sales service.</p>
+        </div>
+
+        <div class="advantage-card animate-on-scroll">
+            <div class="advantage-icon">
+                <i class="fas fa-globe"></i>
+            </div>
+            <h3>Global Ready</h3>
+            <p>CE certified products meeting international standards, ready for deployment worldwide.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Industries Section -->
+<section class="industries" id="industries">
+    <h2 class="section-title animate-on-scroll">Industries We <span class="highlight-red">Serve</span></h2>
+    <p class="section-subtitle animate-on-scroll">
+        Trusted by leading companies across diverse sectors worldwide
+    </p>
+    
+    <div class="industries-grid">
+        <div class="industry-item animate-on-scroll">
+            <i class="fas fa-industry"></i>
+            <span>Manufacturing</span>
+        </div>
+        <div class="industry-item animate-on-scroll">
+            <i class="fas fa-car"></i>
+            <span>Automotive</span>
+        </div>
+        <div class="industry-item animate-on-scroll">
+            <i class="fas fa-wrench"></i>
+            <span>Mechanical</span>
+        </div>
+        <div class="industry-item animate-on-scroll">
+            <i class="fas fa-plane"></i>
+            <span>Aerospace</span>
+        </div>
+        <div class="industry-item animate-on-scroll">
+            <i class="fas fa-flask"></i>
+            <span>Chemical</span>
+        </div>
+        <div class="industry-item animate-on-scroll">
+            <i class="fas fa-truck-loading"></i>
+            <span>Fabrication</span>
+        </div>
+        <div class="industry-item animate-on-scroll">
+            <i class="fas fa-tools"></i>
+            <span>Assembly</span>
+        </div>
+        <div class="industry-item animate-on-scroll">
+            <i class="fas fa-fire"></i>
+            <span>Welding</span>
+        </div>
+        <div class="industry-item animate-on-scroll">
+            <i class="fas fa-hospital"></i>
+            <span>Medical</span>
+        </div>
+        <div class="industry-item animate-on-scroll">
+            <i class="fas fa-paint-brush"></i>
+            <span>Painting</span>
+        </div>
+        <div class="industry-item animate-on-scroll">
+            <i class="fas fa-hard-hat"></i>
+            <span>Construction</span>
+        </div>
+        <div class="industry-item animate-on-scroll">
+            <i class="fas fa-utensils"></i>
+            <span>Food Processing</span>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <h2 class="section-title animate-on-scroll">Get In <span class="highlight-red">Touch</span></h2>
+    <p class="section-subtitle animate-on-scroll">
+        Ready to transform your operations? Contact us today for expert consultation
+    </p>
+    
+    <div class="contact-container">
+        <div class="contact-info animate-on-scroll">
+            <h3>Let's Start Your Project</h3>
+            <p>
+                Whether you need product information, technical specifications, or a custom quote, 
+                our team is ready to assist you. Reach out to us through any of the channels below.
+            </p>
+            
+            <ul class="contact-details">
+                <li>
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <strong>Email Us</strong>
+                        <a href="mailto:asn.donglili@gmail.com">asn.donglili@gmail.com</a>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <strong>Sales Hotline</strong>
+                        <span>+86-133-9012-3916</span>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="contact-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <div class="contact-text">
+                        <strong>Technical Support</strong>
+                        <span>+86-158-4034-6048</span>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <strong>Location</strong>
+                        <span>Shenyang, Liaoning Province, China</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <form class="contact-form animate-on-scroll">
+            <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="your@email.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Company Name</label>
+                <input type="text" placeholder="Your company name">
+            </div>
+            
+            <div class="form-group">
+                <label>Message</label>
+                <textarea placeholder="Tell us about your project requirements..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+                Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer with Social Media Icons -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h3>LABOR-SAVING</h3>
+                <p>
+                    Professional pneumatic manipulator and zero-gravity balance arm manufacturer. 
+                    Delivering ergonomic solutions that enhance workplace safety and productivity since inception.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#advantages">Advantages</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <!-- Facebook - Update href when link provided -->
+                    <a href="#" target="_blank" title="Facebook" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    
+                    <!-- Twitter/X - Update href when link provided -->
+                    <a href="#" target="_blank" title="Twitter" class="social-icon twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    
+                    <!-- LinkedIn - Update href when link provided -->
+                    <a href="#" target="_blank" title="LinkedIn" class="social-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    
+                    <!-- Instagram - Update href when link provided -->
+                    <a href="#" target="_blank" title="Instagram" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    
+                    <!-- YouTube - Update href when link provided -->
+                    <a href="#" target="_blank" title="YouTube" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    
+                    <!-- TikTok - Update href when link provided -->
+                    <a href="#" target="_blank" title="TikTok" class="social-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    
+                    <!-- WhatsApp - Update with phone number -->
+                    <a href="https://wa.me/8613390123916" target="_blank" title="WhatsApp" class="social-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    
+                    <!-- Email -->
+                    <a href="mailto:asn.donglili@gmail.com" title="Email" class="social-icon email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 <strong>LABOR-SAVING</strong>. All Rights Reserved. | 
+               <a href="#">Privacy Policy</a> | 
+               <a href="#">Terms of Service</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ===== LOADING SCREEN =====
+window.addEventListener('load', () => {
+    const loader = document.querySelector('.loader-wrapper');
+    setTimeout(() => {
+        loader.classList.add('hidden');
+    }, 500);
+});
+
+// ===== SCROLL ANIMATIONS =====
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+});
+
+// ===== SMOOTH SCROLL FOR NAV LINKS =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// ===== NAVBAR BACKGROUND ON SCROLL =====
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+        navbar.style.boxShadow = '0 2px 20px rgba(227, 30, 36, 0.1)';
+    } else {
+        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+        navbar.style.boxShadow = 'none';
+    }
+});
+
+// ===== FORM SUBMISSION HANDLER =====
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(this);
+    const name = this.querySelector('input[type="text"]').value;
+    const email = this.querySelector('input[type="email"]').value;
+    const message = this.querySelector('textarea').value;
+    
+    // Show success message (replace with actual form submission logic)
+    alert(`Thank you ${name}! Your message has been received.\nWe will contact you at ${email} shortly.`);
+    
+    // Reset form
+    this.reset();
+});
+
+// ===== COUNTER ANIMATION FOR STATS =====
+function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16);
+    
+    const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+            element.textContent = target + '+';
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(start) + '+';
+        }
+    }, 16);
+}
+
+// Trigger counter animation when stats are visible
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const statNumbers = entry.target.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const value = parseInt(stat.textContent);
+                if (!isNaN(value)) {
+                    animateCounter(stat, value);
+                }
+            });
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+const statsSection = document.querySelector('.stats-grid')?.parentElement;
+if (statsSection) {
+    statsObserver.observe(statsSection);
+}
+
+console.log('🚀 LABOR-SAVING Website Loaded Successfully!');
+</script>
+
+</body>
+</html>
