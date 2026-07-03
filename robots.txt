@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /debug.log
+Disallow: /render_poster.py
+Disallow: /.workbuddy/
+
+Sitemap: https://13390123916.github.io/laborsaving-official-website/sitemap.xml
+
+# Crawl-delay: 1

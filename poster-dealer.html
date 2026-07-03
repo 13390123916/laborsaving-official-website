@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, initial-scale=1.0">
+<title>LABOR-SAVING | Tuyển Đại Lý Khu Vực</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    position: relative;
+}
+
+.poster {
+    width: 1080px;
+    height: 1920px;
+    background: linear-gradient(180deg, #050505 0%, #0a0a0a 12%, #120000 48%, #0a0000 84%, #050505 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Diagonal accent lines */
+.poster::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -300px;
+    width: 800px;
+    height: 2800px;
+    background: linear-gradient(180deg, 
+        rgba(227,30,36,0.03) 0%,
+        rgba(227,30,36,0.06) 30%,
+        rgba(227,30,36,0.02) 60%,
+        rgba(227,30,36,0.05) 100%
+    );
+    transform: rotate(-12deg);
+    z-index: 0;
+}
+
+.poster::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    background: #e31e24;
+    z-index: 10;
+}
+
+.top-bar {
+    position: absolute;
+    top: 0; left: 0; right: 8px;
+    height: 6px;
+    background: linear-gradient(90deg, #e31e24 0%, #ff2d35 50%, #e31e24 100%);
+    z-index: 10;
+}
+
+.bottom-bar {
+    position: absolute;
+    bottom: 0; left: 0; right: 8px;
+    height: 6px;
+    background: linear-gradient(90deg, #e31e24 0%, #ff2d35 50%, #e31e24 100%);
+    z-index: 10;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 60px 70px 50px;
+    height: 100%;
+}
+
+/* ===== HEADER ===== */
+.header {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: #e31e24;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.brand-sub {
+    font-size: 15px;
+    color: #888;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.divider {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #e31e24, transparent);
+    margin: 0 auto 20px;
+}
+
+/* ===== TAG LINE ===== */
+.headline-section {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.tag-line-vi {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ccc;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.tag-line-en {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #666;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.main-headline-vi {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 68px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    line-height: 1.15;
+    color: #ffffff;
+    margin: 18px 0 10px;
+    text-transform: uppercase;
+}
+
+.main-headline-vi .red {
+    color: #e31e24;
+}
+
+.main-headline-en {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 66px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    line-height: 1.15;
+    color: #555;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.main-headline-en .red {
+    color: #e31e24;
+    opacity: 0.6;
+}
+
+/* ===== STATS ROW ===== */
+.stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    margin-bottom: 28px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #e31e24;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 15px;
+    color: #b0b0b0;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.stat-label-en {
+    font-size: 13px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== PRODUCT IMAGE SHOWCASE ===== */
+.image-showcase {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    border: 2px solid rgba(227,30,36,0.25);
+    box-shadow: 
+        0 0 40px rgba(227,30,36,0.15),
+        0 0 80px rgba(0,0,0,0.5) inset,
+        0 20px 50px rgba(0,0,0,0.6);
+}
+
+.image-showcase img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    filter: brightness(1.05) contrast(1.1) saturate(1.1);
+}
+
+/* Gradient overlays for beautification */
+.img-overlay-t {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 60px;
+    background: linear-gradient(180deg, rgba(10,10,10,0.9) 0%, transparent 100%);
+    z-index: 2;
+}
+
+.img-overlay-b {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 80px;
+    background: linear-gradient(0deg, rgba(10,10,10,0.95) 0%, transparent 100%);
+    z-index: 2;
+}
+
+.img-overlay-l {
+    position: absolute;
+    top: 0; left: 0; width: 50px; height: 100%;
+    background: linear-gradient(90deg, rgba(10,10,10,0.7) 0%, transparent 100%);
+    z-index: 2;
+}
+
+.img-overlay-r {
+    position: absolute;
+    top: 0; right: 0; width: 50px; height: 100%;
+    background: linear-gradient(270deg, rgba(10,10,10,0.7) 0%, transparent 100%);
+    z-index: 2;
+}
+
+.img-overlay-vignette {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(10,10,10,0.55) 100%);
+    z-index: 3;
+}
+
+.img-overlay-red {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(227,30,36,0.05) 0%, 
+        transparent 30%, 
+        transparent 70%, 
+        rgba(227,30,36,0.06) 100%
+    );
+    z-index: 4;
+}
+
+/* Corner accents */
+.img-corner {
+    position: absolute;
+    z-index: 5;
+}
+
+.img-corner-tl {
+    top: 0; left: 0;
+    width: 40px; height: 40px;
+    border-top: 3px solid rgba(227,30,36,0.5);
+    border-left: 3px solid rgba(227,30,36,0.5);
+}
+
+.img-corner-tr {
+    top: 0; right: 0;
+    width: 40px; height: 40px;
+    border-top: 3px solid rgba(227,30,36,0.5);
+    border-right: 3px solid rgba(227,30,36,0.5);
+}
+
+.img-corner-bl {
+    bottom: 0; left: 0;
+    width: 40px; height: 40px;
+    border-bottom: 3px solid rgba(227,30,36,0.5);
+    border-left: 3px solid rgba(227,30,36,0.5);
+}
+
+.img-corner-br {
+    bottom: 0; right: 0;
+    width: 40px; height: 40px;
+    border-bottom: 3px solid rgba(227,30,36,0.5);
+    border-right: 3px solid rgba(227,30,36,0.5);
+}
+
+/* Image label badge */
+.img-badge {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.85);
+    border: 1px solid rgba(227,30,36,0.4);
+    padding: 8px 28px;
+    z-index: 6;
+}
+
+.img-badge-vi {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #e31e24;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.img-badge-en {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* ===== BENEFITS ===== */
+.benefits-section {
+    margin-bottom: 20px;
+}
+
+.section-title-vi {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #e31e24;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.section-title-en {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.benefits-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    flex: 1;
+    min-width: 210px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 16px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.benefit-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.benefit-text-vi {
+    font-size: 16px;
+    color: #ddd;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.benefit-text-en {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.4;
+    margin-top: 1px;
+}
+
+/* ===== EMAIL SECTION ===== */
+.email-section {
+    text-align: center;
+    margin-bottom: 14px;
+    padding: 18px 0;
+    border-top: 1px solid rgba(227,30,36,0.2);
+    border-bottom: 1px solid rgba(227,30,36,0.2);
+}
+
+.email-label-vi {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #b0b0b0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.email-label-en {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.email-address {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #e31e24;
+    letter-spacing: 2px;
+}
+
+.email-phone {
+    font-size: 18px;
+    color: #999;
+    letter-spacing: 1px;
+}
+
+/* ===== CTA ===== */
+.cta-section {
+    text-align: center;
+    padding: 0 40px;
+}
+
+.cta-line-vi {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 3px;
+    margin-bottom: 2px;
+}
+
+.cta-line-en {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #e31e24 0%, #ff2d35 100%);
+    color: #fff;
+    padding: 16px 56px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+.cta-button-en {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    border-color: #e31e24;
+    color: #e31e24;
+    background: rgba(227,30,36,0.1);
+}
+
+/* ===== WEB ===== */
+.website {
+    text-align: center;
+}
+
+.website-text {
+    font-size: 16px;
+    color: #666;
+    letter-spacing: 2px;
+}
+
+.website-text .red {
+    color: #e31e24;
+}
+
+</style>
+</head>
+<body>
+<div class="poster">
+    <div class="top-bar"></div>
+    <div class="bottom-bar"></div>
+
+    <div class="content">
+
+        <!-- ===== HEADER ===== -->
+        <div class="header">
+            <div class="brand">LABOR-SAVING</div>
+            <div class="brand-sub">Pneumatic Manipulators &amp; Balance Arms</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ===== TAG LINE ===== -->
+        <div class="headline-section">
+            <div class="tag-line-vi">CƠ HỘI HỢP TÁC KINH DOANH</div>
+            <div class="tag-line-en">BUSINESS PARTNERSHIP OPPORTUNITY</div>
+        </div>
+
+        <!-- ===== MAIN HEADLINE ===== -->
+        <div class="headline-section">
+            <div class="main-headline-vi">
+                TUYỂN<br><span class="red">ĐẠI LÝ</span><br>KHU VỰC
+            </div>
+            <div class="main-headline-en">
+                REGIONAL<br><span class="red">DISTRIBUTOR</span><br>RECRUITMENT
+            </div>
+        </div>
+
+        <!-- ===== STATS ===== -->
+        <div class="stats-row">
+            <div class="stat-item">
+                <div class="stat-number">70<span style="font-size:22px">kg</span></div>
+                <div class="stat-label">Tải Trọng Tối Đa</div>
+                <div class="stat-label-en">Max Load</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">2<span style="font-size:22px">m</span></div>
+                <div class="stat-label">Bán Kính Làm Việc</div>
+                <div class="stat-label-en">Working Radius</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">0<span style="font-size:22px">kg</span></div>
+                <div class="stat-label">Cảm Giác Nâng</div>
+                <div class="stat-label-en">Operating Feel</div>
+            </div>
+        </div>
+
+        <!-- ===== PRODUCT IMAGE SHOWCASE ===== -->
+        <div class="image-showcase">
+            <img src="images/pneumatic-manipulator.jpg" alt="LABOR-SAVING Pneumatic Manipulator">
+
+            <!-- Darken edges to blend with poster -->
+            <div class="img-overlay-t"></div>
+            <div class="img-overlay-b"></div>
+            <div class="img-overlay-l"></div>
+            <div class="img-overlay-r"></div>
+            <div class="img-overlay-vignette"></div>
+            <div class="img-overlay-red"></div>
+
+            <!-- Corner accents -->
+            <div class="img-corner img-corner-tl"></div>
+            <div class="img-corner img-corner-tr"></div>
+            <div class="img-corner img-corner-bl"></div>
+            <div class="img-corner img-corner-br"></div>
+
+            <!-- Image label -->
+            <div class="img-badge">
+                <div class="img-badge-vi">Tay Máy Trợ Lực Khí Nén</div>
+                <div class="img-badge-en">PNEUMATIC MANIPULATOR — LS50 / LS70</div>
+            </div>
+        </div>
+
+        <!-- ===== BENEFITS ===== -->
+        <div class="benefits-section">
+            <div class="section-title-vi">QUYỀN LỢI ĐẠI LÝ</div>
+            <div class="section-title-en">DISTRIBUTOR BENEFITS</div>
+
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <div>
+                        <div class="benefit-text-vi">Chiết Khấu Cạnh Tranh</div>
+                        <div class="benefit-text-en">Competitive margins &amp; volume rebates</div>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌍</div>
+                    <div>
+                        <div class="benefit-text-vi">Độc Quyền Khu Vực</div>
+                        <div class="benefit-text-en">Exclusive regional territory</div>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎓</div>
+                    <div>
+                        <div class="benefit-text-vi">Đào Tạo &amp; Hỗ Trợ</div>
+                        <div class="benefit-text-en">Technical training &amp; marketing</div>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📦</div>
+                    <div>
+                        <div class="benefit-text-vi">Giao Hàng Toàn Cầu</div>
+                        <div class="benefit-text-en">Fast global shipping</div>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔧</div>
+                    <div>
+                        <div class="benefit-text-vi">Bảo Hành Chính Hãng</div>
+                        <div class="benefit-text-en">Factory warranty &amp; service</div>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📈</div>
+                    <div>
+                        <div class="benefit-text-vi">Tiềm Năng Tăng Trưởng</div>
+                        <div class="benefit-text-en">High-growth market demand</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== EMAIL HIGHLIGHT ===== -->
+        <div class="email-section">
+            <div class="email-label-vi">📧 LIÊN HỆ QUA EMAIL</div>
+            <div class="email-label-en">CONTACT US BY EMAIL</div>
+            <div class="email-address">asn.donglili@gmail.com</div>
+            <div class="email-phone">📱 +86 133-9012-3916</div>
+        </div>
+
+        <!-- ===== CTA ===== -->
+        <div class="cta-section">
+            <div class="cta-line-vi">LIÊN HỆ NGAY HÔM NAY</div>
+            <div class="cta-line-en">CONTACT US TODAY</div>
+
+            <div class="cta-button">TRỞ THÀNH ĐẠI LÝ</div>
+            <div class="cta-button-en">BECOME A DISTRIBUTOR</div>
+
+            <!-- ===== SOCIAL ICONS ===== -->
+            <div class="social-row">
+                <a class="social-icon" href="https://www.facebook.com/profile.php?id=61590937000259"><i class="fab fa-facebook-f"></i></a>
+                <a class="social-icon" href="https://x.com/LABORSAVINGls"><i class="fab fa-x-twitter"></i></a>
+                <a class="social-icon" href="https://www.linkedin.com/in/lili-dong"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" href="https://www.instagram.com/asn.donglili/"><i class="fab fa-instagram"></i></a>
+                <a class="social-icon" href="https://www.youtube.com/@%E9%9B%B7%E6%99%AE%E8%B5%9B%E7%BB%B4-LS"><i class="fab fa-youtube"></i></a>
+                <a class="social-icon" href="https://www.tiktok.com/@airbalancer"><i class="fab fa-tiktok"></i></a>
+            </div>
+
+            <div class="website">
+                <div class="website-text">
+                    <span class="red">laborsaving-official-website</span> &nbsp;·&nbsp; github.io
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Main Website -->
+  <url>
+    <loc>https://13390123916.github.io/laborsaving-official-website/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://13390123916.github.io/laborsaving-official-website/"/>
+    
+    <!-- Images on main page -->
+    <image:image>
+      <image:loc>https://13390123916.github.io/laborsaving-official-website/images/product-showcase.jpg</image:loc>
+      <image:title>LABOR-SAVING Pneumatic Manipulator Product Showcase</image:title>
+      <image:caption>LS50 LS70 pneumatic manipulator and zero-gravity balance arm industrial handling equipment</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://13390123916.github.io/laborsaving-official-website/images/pneumatic-manipulator.jpg</image:loc>
+      <image:title>LABOR-SAVING Pneumatic Manipulator 70kg Capacity</image:title>
+      <image:caption>Advanced pneumatic lift assist equipment with intelligent control system</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://13390123916.github.io/laborsaving-official-website/images/balance-arm.jpg</image:loc>
+      <image:title>LS50 LS70 Zero-Gravity Balance Arm at Trade Show</image:title>
+      <image:caption>70kg industrial ergonomic material handling balance arm demonstration</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://13390123916.github.io/laborsaving-official-website/images/custom-solution.jpg</image:loc>
+      <image:title>LABOR-SAVING Custom Industrial Ergonomic Solutions</image:title>
+      <image:caption>Tailored pneumatic manipulator system engineering and design</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Distributor Recruitment Poster -->
+  <url>
+    <loc>https://13390123916.github.io/laborsaving-official-website/poster-dealer.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
